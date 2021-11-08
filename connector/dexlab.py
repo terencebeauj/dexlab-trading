@@ -16,12 +16,12 @@ class Dexlab:
         data = self._make_request(endpoint, "GET")
         return data
 
-    def get_market_price(self, address):
+    def get_market_price_by_address(self, address):
         endpoint = f"/v1/prices/{address}/last"
         data = self._make_request(endpoint, "GET")
         return data
 
-    def get_all_market_prices(self):
+    def get_market_prices(self):
         endpoint = "/v1/prices"
         data = self._make_request(endpoint, "GET")
         return data
