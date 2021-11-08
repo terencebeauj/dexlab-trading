@@ -52,12 +52,12 @@ class Dexlab:
         return data
 
     def get_trades_by_address(self, address):
-        endpoint = f"v1/trades/{address}/24h"
+        endpoint = f"/v1/trades/{address}/24h"
         data = self._make_request(endpoint, "GET")
         return data
 
     def get_latest_trade_24h(self, address):
-        endpoint = f"v1/trades/{address}/last"
+        endpoint = f"/v1/trades/{address}/last"
         data = self._make_request(endpoint, "GET")
         return data
 
