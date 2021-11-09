@@ -1,7 +1,14 @@
 from connector.dexlab import *
+import pandas as pd
 
-address = "8xhfMZpJTvuYBqzmKM3jQkzk3gcT8Pz7AnuxNUeLo6mY"
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+
+pd.set_option("display.width", None)
 
 dexlab = Dexlab()
-market_prices = dexlab.get_market_prices()
-print(market_prices)
+
+while True:
+    market_prices = dexlab.get_market_prices()
+    df = pd.DataFrame(market_prices)
+    print(df.head())
